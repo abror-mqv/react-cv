@@ -145,14 +145,14 @@ const Main = () => {
                 <span>"Поехали!" ©</span>
             </Center>
 
-            <Contact target="_blank" href="mailto:codebucks27@gmail.com">
+            <Contact target="_blank" href="https://t.me/mamatqulov_abror">
                 <motion.h2
                 initial={{
                     y:-200,
                     transition: { type:'spring', duration: 1.5, delay:1}
                 }}
                 animate={{
-                    y:0,
+                    y:10,
                     transition: { type:'spring', duration: 1.5, delay:1}
                 }}
                 whileHover={{scale: 1.1}}
@@ -169,7 +169,8 @@ const Main = () => {
                     transition: { type:'spring', duration: 1.5, delay:1}
                 }}
                 animate={{
-                    y:0,
+                    y:-18,
+                    x: 44,
                     transition: { type:'spring', duration: 1.5, delay:1}
                 }}
                 whileHover={{scale: 1.1}}
@@ -204,6 +205,7 @@ const Main = () => {
                 }}
                 animate={{
                     y:0,
+                    x: 28,
                     transition: { type:'spring', duration: 1.5, delay:1}
                 }}
                  whileHover={{scale: 1.1}}
@@ -220,6 +222,7 @@ const Main = () => {
                 }}
                 animate={{
                     y:0,
+                    x: 20,
                     transition: { type:'spring', duration: 1.5, delay:1}
                 }}
                  whileHover={{scale: 1.1}}

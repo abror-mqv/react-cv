@@ -1,7 +1,7 @@
 import React from 'react'
 import styled, { ThemeProvider } from 'styled-components'
-import {lightTheme} from './Themes';
-import { Design, Develope} from './AllSvgs';
+import { lightTheme } from './Themes';
+import { Design, Develope } from './AllSvgs';
 
 
 import LogoComponent from '../subComponents/LogoComponent';
@@ -18,7 +18,6 @@ position: relative;
 display: flex;
 justify-content: space-evenly;
 align-items: center;
-
 
 `
 
@@ -41,6 +40,10 @@ justify-content: space-between;
 &:hover{
     color: ${props => props.theme.body};
     background-color: ${props => props.theme.text};
+}
+@media screen and (max-width: 720px){
+    width: 70%;
+
 }
 `
 
@@ -82,72 +85,90 @@ ul,p{
 }
 `
 
+const Boxes = styled.div`
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 10%;
+    @media screen and (max-width: 720px){   
+        display: flex;
+        z-index: 99999;
+        gap: 30px;
+        height: -webkit-fill-available;
+        flex-wrap: wrap;
+        margin-top: 120px;
+        justify-content: center;
+    }
+`
+
 const MySkillsPage = () => {
     return (
         <ThemeProvider theme={lightTheme}>
-<Box>
+            <Box>
 
-<LogoComponent theme='light'/>
-<SocialIcons theme='light'/>
-<PowerButton />
-<ParticleComponent theme='light' />
-            <Main>
-<Title>
-    <Design width={40} height={40} /> Designer
-</Title>
-<Description>
-I love to create design which speaks, Keep it clean, minimal and simple.
-</Description>
-<Description>
-<strong>I like to Design</strong>
-<ul>
-    <li>
-        Web Design
-    </li>
-    <li>
-        Mobile Apps
-    </li>
-</ul>
-</Description>
-<Description>
-<strong>Tools</strong>
-<ul>
-    <li>
-       Figma
-    </li>
-    
-</ul>
-</Description>
+                <LogoComponent theme='light' />
+                <SocialIcons theme='light' />
+                <PowerButton />
+                <ParticleComponent theme='light' />
+                <Boxes>
+                    <Main>
+                        <Title>
+                            <Design width={40} height={40} /> Астронавт
+                        </Title>
+                        <Description>
+                            Не зная карате <br /> не станешь мастером кунг-фу
+                        </Description>
+                        <Description>
+                            <strong>Умею в:</strong>
+                            <ul>
+                                <li>
+                                    Ui/Ux - Figma; Strapi, linux, python; django: templates, drf; bs4; reportlab; sqlite3,
+                                </li>
+                                <br />
+                                <li>
+                                    Алгоритмы, БД (SQL, Mongo), ООП
+                                </li>
+                            </ul>
+                        </Description>
+                        <Description>
+                            <strong>Игрался с:</strong>
+                            <ul>
+                                <li>
+                                    Flutter, Java Core, C++, Олимпиадными задачками
+                                </li>
+                            </ul>
+                        </Description>
 
-            </Main>
-            <Main>
-<Title>
-    <Develope width={40} height={40} /> Frontend Developer
-</Title>
-<Description>
-I value business or brand for which i'm creating, thus i enjoy bringing new ideas to life.
-</Description>
-<Description>
-<strong>Skills</strong>
-<p>
-Html, Css, Js, React, Redux, Sass, Bootstrap, Tailwind, Firebase etc.
-</p>
-</Description>
-<Description>
-<strong>Tools</strong>
-<p>
-VScode, Github, Codepen etc.
-</p>
-</Description>
+                    </Main>
+                    <Main>
+                        <Title>
+                            <Develope width={40} height={40} /> Frontend Разработчик
+                        </Title>
+                        <Description>
+                            По техническому стеку:
+                        </Description>
+                        <Description>
+                            <strong>База:</strong>
+                            <p>
+                                Html, sass/scss, Js, React, Next.Js, Redux, Redux toolkit, Styled-Components, Node.js, npm, Git,
+                            </p>
+                        </Description>
+                        <Description>
+                            <strong>Работал с:</strong>
+                            <p>
+                                MUi, Framer-motion, vite, i18next, swiper.js, formik, ts-particles, TailWindCss, yarn, module-css
+                            </p>
+                        </Description>
 
-            </Main>
+                    </Main>
+                </Boxes>
 
-            <BigTitle text="SKILLS" top="80%" right="30%" />
 
-        </Box>
+                <BigTitle text="SKILLS" top="80%" right="30%" />
+
+            </Box>
 
         </ThemeProvider>
-        
+
     )
 }
 
